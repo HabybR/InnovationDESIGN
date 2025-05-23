@@ -1,0 +1,329 @@
+/* Importa la fuente "Poppins" desde Google Fonts con varios pesos y estilos */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;...&display=swap');
+
+/* Estilo general del cuerpo del documento */
+body {
+    margin: 0; /* Elimina el margen por defecto */
+    background-color: #000; /* Fondo negro */
+    color: #eee; /* Color de texto gris claro */
+    font-family: Poppins; /* Usa la fuente importada */
+    font-size: 12px; /* Tamaño base pequeño de fuente */
+}
+
+/* Quita el subrayado de todos los enlaces */
+a {
+    text-decoration: none;
+}
+
+/* Estilo para el encabezado (header) */
+header {
+    width: 1140px;             /* Ancho fijo */
+    max-width: 80%;            /* Se adapta al tamaño de pantalla si es más pequeño */
+    margin: auto;              /* Centrado horizontalmente */
+    height: 50px;              /* Altura del encabezado */
+    display: flex;             /* Usamos flexbox para alinear elementos */
+    align-items: center;       /* Centra los elementos verticalmente */
+    position: relative;        /* Para permitir un z-index efectivo */
+    z-index: 100;              /* Encima de otros elementos */
+}
+
+/* Estilo para los enlaces dentro del header */
+header a {
+    color: #eee;               /* Mismo color claro que el fondo del body */
+    margin-right: 40px;        /* Espacio entre enlaces */
+}
+
+/* Sección del carrusel (pantalla completa) */
+.carousel {
+    height: 100vh;             /* Ocupa toda la altura de la pantalla */
+    margin-top: -50px;         /* Compensa la altura del header (posible efecto solapado) */
+    width: 100vw;              /* Ocupa todo el ancho de la ventana */
+    overflow: hidden;          /* Oculta el contenido que sobresalga */
+    position: relative;        /* Para posicionar los elementos hijos absolutamente */
+}
+
+/* Cada elemento (slide) del carrusel */
+.carousel .list .item {
+    width: 100%;
+    height: 100%;
+    position: absolute;        /* Superpuestos uno encima del otro */
+    inset: 0 0 0 0;            /* Atajo para top, right, bottom, left: 0 */
+}
+
+/* Imagen dentro de cada slide */
+.carousel .list .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* Hace que la imagen cubra todo el espacio sin deformarse */
+}
+
+/* Contenido textual dentro de cada slide */
+.carousel .list .item .content {
+    position: absolute;
+    top: 20%;                  /* Aparece un poco más abajo del top */
+    width: 1140px;
+    max-width: 80%;            /* Se adapta a pantallas más pequeñas */
+    left: 50%;                 /* Centrado horizontal */
+    transform: translateX(-50%); /* Ajuste fino para centrar exactamente */
+    padding-right: 30%;        /* Espacio a la derecha (útil si hay imagen o diseño asimétrico) */
+    box-sizing: border-box;    /* Incluye padding en el tamaño total */
+    color: #fff;               /* Texto blanco */
+    text-shadow: 0 5px 10px #0004; /* Sombra para mejorar contraste con fondo */
+}
+
+/* Estilo para el nombre del autor del contenido */
+.carousel .list .item .author {
+    font-weight: bold;
+    letter-spacing: 10px;      /* Espaciado entre letras para un estilo más elegante */
+}
+
+/* Estilo para título y tema dentro del contenido */
+.carousel .list .item .title,
+.carousel .list .item .topic {
+    font-size: 5em;            /* Tamaño de letra muy grande */
+    font-weight: bold;
+    line-height: 1.3em;        /* Altura de línea más cómoda para texto grande */
+}
+
+/* Estilo específico para el tema (puede ser palabra clave o destacado) */
+.carousel .list .item .topic {
+    color: #f1683a;            /* Color naranja vibrante */
+}
+.carousel .list .item .buttons {
+    display: grid; /* Usamos grid para organizar botones en una cuadrícula */
+    grid-template-columns: repeat(2, 130px); /* Dos columnas de 130px cada una */
+    grid-template-rows: 40px; /* Una sola fila de 40px de alto */
+    gap: 5px; /* Espacio de 5px entre los botones */
+    margin-top: 20px; /* Separación hacia arriba del contenido */
+}
+.carousel .list .item .buttons button {
+    border: none; /* Sin borde */
+    background-color: #eee; /* Color de fondo gris claro */
+    letter-spacing: 3px; /* Espaciado entre letras */
+    font-family: Poppins; /* Fuente Poppins */
+    font-weight: 500; /* Grosor medio de fuente */
+}
+.carousel .list .item .buttons button:nth-child(2) {
+    background-color: transparent; /* Fondo transparente */
+    border: 1px solid #fff; /* Borde blanco */
+    color: #eee; /* Texto gris claro */
+}
+/* thumbail */
+.thumbnail {
+    position: absolute; /* Se coloca respecto al contenedor padre (carrusel) */
+    bottom: 50px; /* Separación desde la parte inferior */
+    left: 50%; /* Posicionado al 50% desde la izquierda */
+    width: max-content; /* Solo ocupa el espacio necesario */
+    z-index: 100; /* Aparece encima de otros elementos */
+    display: flex; /* Usa flexbox para alinear miniaturas horizontalmente */
+    gap: 20px; /* Espacio entre miniaturas */
+}
+.thumbnail .item {
+    width: 150px;
+    height: 220px;
+    flex-shrink: 0; /* No se encoge si el contenedor se hace más pequeño */
+    position: relative; /* Para posicionar el contenido dentro */
+}
+.thumbnail .item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin deformarse */
+    border-radius: 20px; /* Bordes redondeados */
+}
+.thumbnail .item .content {
+    color: #fff; /* Texto blanco */
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+}
+.thumbnail .item .content .title {
+    font-weight: 500; /* Título con peso medio */
+}
+.thumbnail .item .content .description {
+    font-weight: 300; /* Descripción más ligera */
+}
+}
+/* arrows */
+.arrows {
+    position: absolute; /* Posicionamiento libre dentro del carrusel */
+    top: 80%; /* 80% desde la parte superior */
+    right: 52%; /* 52% desde el borde derecho */
+    z-index: 100; /* Encima de otros elementos */
+    width: 300px;
+    max-width: 30%; /* Se adapta en pantallas pequeñas */
+    display: flex; /* Distribuye flechas en línea */
+    gap: 10px; /* Espacio entre botones */
+    align-items: center; /* Centra verticalmente */
+}
+.arrows button {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%; /* Botones circulares */
+    background-color: #eee4; /* Color semitransparente */
+    border: none;
+    color: #fff; /* Texto blanco */
+    font-family: monospace; /* Fuente monoespaciada */
+    font-weight: bold;
+    transition: .5s; /* Transición suave para efectos */
+}
+.arrows button:hover {
+    background-color: #fff; /* Cambia fondo al pasar el mouse */
+    color: #000; /* Cambia texto a negro */
+}
+
+.carousel .list .item:nth-child(1) {
+    z-index: 1; /* El primer slide se coloca por encima del resto */
+}
+/* animation text in first item */
+
+.carousel .list .item:nth-child(1) .content .author,
+.carousel .list .item:nth-child(1) .content .title,
+.carousel .list .item:nth-child(1) .content .topic,
+.carousel .list .item:nth-child(1) .content .des,
+.carousel .list .item:nth-child(1) .content .buttons
+{
+    transform: translateY(50px);
+    filter: blur(20px);
+    opacity: 0;
+    animation: showContent .5s 1s linear 1 forwards;
+}
+@keyframes showContent{
+    to{
+        transform: translateY(0px);
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+.carousel .list .item:nth-child(1) .content .title{
+    animation-delay: 1.2s!important;
+}
+.carousel .list .item:nth-child(1) .content .topic{
+    animation-delay: 1.4s!important;
+}
+.carousel .list .item:nth-child(1) .content .des{
+    animation-delay: 1.6s!important;
+}
+.carousel .list .item:nth-child(1) .content .buttons{
+    animation-delay: 1.8s!important;
+}
+/* create animation when next click */
+.carousel.next .list .item:nth-child(1) img{
+    width: 150px;
+    height: 220px;
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    border-radius: 30px;
+    animation: showImage .5s linear 1 forwards;
+}
+@keyframes showImage{
+    to{
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+}
+
+.carousel.next .thumbnail .item:nth-last-child(1){
+    overflow: hidden;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.prev .list .item img{
+    z-index: 100;
+}
+@keyframes showThumbnail{
+    from{
+        width: 0;
+        opacity: 0;
+    }
+}
+.carousel.next .thumbnail{
+    animation: effectNext .5s linear 1 forwards;
+}
+
+@keyframes effectNext{
+    from{
+        transform: translateX(150px);
+    }
+}
+
+/* running time */
+
+.carousel .time{
+    position: absolute;
+    z-index: 1000;
+    width: 0%;
+    height: 3px;
+    background-color: #f1683a;
+    left: 0;
+    top: 0;
+}
+
+.carousel.next .time,
+.carousel.prev .time{
+    animation: runningTime 3s linear 1 forwards;
+}
+@keyframes runningTime{
+    from{ width: 100%}
+    to{width: 0}
+}
+
+
+/* prev click */
+
+.carousel.prev .list .item:nth-child(2){
+    z-index: 2;
+}
+
+.carousel.prev .list .item:nth-child(2) img{
+    animation: outFrame 0.5s linear 1 forwards;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+@keyframes outFrame{
+    to{
+        width: 150px;
+        height: 220px;
+        bottom: 50px;
+        left: 50%;
+        border-radius: 20px;
+    }
+}
+
+.carousel.prev .thumbnail .item:nth-child(1){
+    overflow: hidden;
+    opacity: 0;
+    animation: showThumbnail .5s linear 1 forwards;
+}
+.carousel.next .arrows button,
+.carousel.prev .arrows button{
+    pointer-events: none;
+}
+.carousel.prev .list .item:nth-child(2) .content .author,
+.carousel.prev .list .item:nth-child(2) .content .title,
+.carousel.prev .list .item:nth-child(2) .content .topic,
+.carousel.prev .list .item:nth-child(2) .content .des,
+.carousel.prev .list .item:nth-child(2) .content .buttons
+{
+    animation: contentOut 1.5s linear 1 forwards!important;
+}
+
+@keyframes contentOut{
+    to{
+        transform: translateY(-150px);
+        filter: blur(20px);
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 678px) {
+    .carousel .list .item .content{
+        padding-right: 0;
+    }
+    .carousel .list .item .content .title{
+        font-size: 30px;
+    }
+}

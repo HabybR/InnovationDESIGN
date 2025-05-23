@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Formulario Bonito</title>
+  <title>Botón Inicio </title>
+  <!-- Enlace a Font Awesome -->
+  <link rel="stylesheet" href="">
+  <a href="index.html" class="btn-contacto">
+  <i class="fas fa-phone"></i>
+ Inicio
+</a>
+  
+  <style>
+
+    body 
+
+    .btn-contacto {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, transform 0.2s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .btn-contacto:hover {
+      background-color: #0056b3;
+      transform: scale(1.05);
+    }
+
+    .btn-contacto i {
+      font-size: 18px;
+    }
+  </style>
+
+
+
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: #f0f4f8;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .formulario {
+      background-color: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      width: 100%;
+      max-width: 500px;
+    }
+
+    .input-formulario {
+      margin-bottom: 20px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .input-formulario label {
+      font-weight: bold;
+      margin-bottom: 8px;
+      color: #333;
+    }
+
+    .input-formulario input,
+    .input-formulario textarea {
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+      resize: vertical;
+    }
+
+    .input-formulario textarea {
+      min-height: 100px;
+    }
+
+    .btn-formulario {
+      text-align: center;
+    }
+
+    .btn {
+      padding: 12px 25px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    .btn-verde {
+      background-color: #28a745;
+      color: white;
+      transition: background-color 0.3s ease;
+    }
+
+    .btn-verde:hover {
+      background-color: #218838;
+    }
+  </style>
+</head>
+<body>
+
+  <form class="formulario">
+    <div class="input-formulario">
+      <label for="nombre">Nombre</label>
+      <input type="text" placeholder="Pedro" id="nombre">
+    </div>
+    <div class="input-formulario">
+      <label for="apellidos">Apellido</label>
+      <input type="text" placeholder="López" id="apellidos">
+    </div>
+    <div class="input-formulario">
+      <label for="correo">Correo</label>
+      <input type="email" placeholder="ejemplo@ejemplo.com" id="correo">
+    </div>
+    <div class="input-formulario">
+      <label for="telefono">Teléfono</label>
+      <input type="tel" placeholder="+52 656 123 4567" id="telefono">
+    </div>
+    <div class="input-formulario">
+      <label for="mensaje">Mensaje</label>
+      <textarea placeholder="Escribe tu mensaje..."></textarea>
+    </div>
+    <div class="btn-formulario">
+      <input type="submit" class="btn btn-verde" value="Enviar">
+    </div>
+  </form>
+
+</body>
+</html>

@@ -1,0 +1,239 @@
+<!DOCTYPE html> <!-- Indica que es un documento HTML5 -->
+<html lang="es"> <!-- Lenguaje español para el navegador -->
+
+<head>
+    <meta charset="UTF-8"> <!-- Codificación de caracteres para usar acentos, eñes, etc. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Hace el sitio responsivo en móviles -->
+    <title>Página web</title> <!-- Título que aparece en la pestaña del navegador -->
+
+    <!-- Enlace al archivo de estilos personalizados -->
+    <link rel="stylesheet" href="estilos.css">
+
+    <!-- Fuente de Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <!-- Iconos desde Boxicons (íconos SVG listos para usar) -->
+    <link href='https://unpkg.com/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    
+    <!-- Encabezado principal del sitio -->
+    <header class="header" id="inicio">
+        
+        <!-- Ícono del menú hamburguesa (probablemente para móviles) -->
+        <img class="hamburguer" src="img/hamburguesa.svg" alt="">
+
+        <!-- Menú de navegación -->
+        <nav class="menu-navegacion">
+            <a href="#inicio">Inicio</a>
+            <a href="#servicio">Servicio</a>
+            <a href="#galeria">Portafolio</a>
+            <a href="#expertos">Especializados</a>
+            <a href="#footer">Contacto</a>
+        </nav>
+
+        <!-- Contenedor para el título principal -->
+        <div class="contenedor head">
+            <h1 class="titulo">Convertimos tus ideas en una realidad</h1>
+        </div>
+    </header>
+
+    <!-- Contenido principal de la página -->
+    <main>
+        
+        <!-- Sección de servicios -->
+        <section class="services contenedor" id="servicio">
+
+            <!-- Subtítulo para la sección -->
+            <h2 class="subtitulo">Nuestro servicio</h2>
+
+            <!-- Contenedor que agrupa imagen y lista de servicios -->
+            <div class="contenedor-servicio">
+
+                <!-- Imagen decorativa de la sección -->
+                <img src="img/inov.png" alt="">
+
+                <!-- Lista de servicios -->
+                <div class="checklist-servicio">
+                    <div class="service">
+                        <!-- Título del servicio con número decorativo -->
+                        <h3 class="n-service"><span class="number">1</span>Diseñadora de Interiores</h3>
+
+                        <!-- Descripción general -->
+                        <p>Transformamos espacios para reflejar tu estilo y mejorar tu calidad de vida. Estos son algunos de los servicios que ofrecemos:</p>
+                        <br>
+
+                        <!-- Lista de servicios detallados -->
+                        <p>1. Diseño de Interiores Residencial  
+                        Creamos ambientes funcionales, acogedores y personalizados para tu hogar.</p>
+                        <br>
+
+                        <p>2. Diseño de Interiores Comercial  
+                        Optimizamos espacios comerciales para que sean atractivos y alineados con tu marca.</p>
+                        <br>
+
+                        <p>3. Asesoría de Diseño  
+                        Ofrecemos sesiones para ayudarte con decisiones sobre mobiliario, colores y distribución.</p>
+                        <br>
+
+                        <p>4. Decoración y Estilismo  
+                        Añadimos los toques decorativos que dan vida a cualquier espacio.</p>
+                        <br>
+
+                        <p>5. Remodelación y Redistribución de Espacios  
+                        Rediseñamos tu espacio actual sin necesidad de mudarte.</p>
+                        <br>
+
+                        <p>6. Diseño de Mobiliario Personalizado  
+                        Creamos muebles a medida para aprovechar cada rincón.</p>
+                        <br>
+
+                        <!-- Biografía o descripción de la diseñadora -->
+                        <p>Lic. Mayra Jocelyn Soriano Macías Diseñadora de Interiores.  
+                        En Innovation Design transformamos tus espacios en reflejos de tu estilo y personalidad.</p>
+                    </div> <!-- Fin del servicio -->
+                </div> <!-- Fin de checklist-servicio -->
+            </div> <!-- Fin de contenedor-servicio -->
+        </section> <!-- Fin de sección de servicios -->
+        </section>
+        <!-- Sección de la galería -->
+<section class="gallery" id="galeria">
+    <div class="contenedor">
+        <!-- Título de la sección -->
+        <h2 class="subtitulo">Galería</h2>
+
+        <!-- Botón que lleva a otra página (carrusel) -->
+        <a href="slindex.html" class="boton-redireccion">Ir a carrusel</a>
+
+        <!-- Contenedor con imágenes de la galería -->
+        <div class="contenedor-galeria">
+            <img src="img/uno.jpg" class="img-galeria" alt="Hola">
+            <img src="img/dos.jpg" class="img-galeria" alt="">
+            <img src="img/tres.jpg" class="img-galeria" alt="">
+            <img src="img/cuatro.jpg" class="img-galeria" alt="">
+            <img src="img/cinco.jpg" class="img-galeria" alt="">
+            <img src="img/seis.jpg" class="img-galeria" alt="">
+        </div>
+    </div>
+</section>
+
+<!-- Contenedor para mostrar imagen ampliada al hacer clic (efecto lightbox) -->
+<div class="imagen-light">
+    <!-- Botón para cerrar -->
+    <img src="img/close.svg" alt="" class="close">
+    
+    <!-- Aquí se inserta la imagen que se amplía dinámicamente con JS -->
+    <img src="" alt="" class="agregar-imagen">
+</div>
+
+<!-- Sección de expertos -->
+<section class="contenedor" id="expertos">
+    <h2 class="subtitulo">Expertos en:</h2>
+    <!-- Aquí podrías incluir una lista o grid de especialidades o miembros del equipo -->
+</section>
+
+<!-- Botón de contacto con ícono -->
+
+<!-- Enlace a la página "contactos.html" con un ícono de teléfono -->
+<a href="contactos.html" class="btn-contacto">
+    <i class="fas fa-phone"></i> <!-- Ícono de teléfono usando Font Awesome -->
+    Contactos
+</a>
+
+<!-- Estilos del botón de contacto -->
+<style>
+  /* Estilos generales para el botón */
+  .btn-contacto {
+    background-color: #007bff;         /* Azul base */
+    color: white;                      /* Texto blanco */
+    border: none;
+    padding: 12px 24px;
+    font-size: 16px;
+    border-radius: 8px;                /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+    display: inline-flex;              /* Ícono y texto en línea */
+    align-items: center;
+    gap: 10px;                         /* Espacio entre ícono y texto */
+  }
+
+  /* Efecto al pasar el mouse */
+  .btn-contacto:hover {
+    background-color: #0056b3;         /* Azul más oscuro */
+    transform: scale(1.05);            /* Aumenta ligeramente el tamaño */
+  }
+
+  /* Estilo del ícono */
+  .btn-contacto i {
+    font-size: 18px;
+  }
+</style>
+
+
+            
+       <!-- Sección de expertos -->
+<section class="experts">
+    <!-- Primer experto -->
+    <div class="cont-expert">
+        <img src="img/pie_chart.svg" alt=""> <!-- Imagen de ícono -->
+        <h3 class="n-expert">Analytics</h3>   <!-- Título del experto -->
+    </div>
+
+    <!-- Segundo experto -->
+    <div class="cont-expert">
+        <img src="img/search_engine.svg" alt=""> <!-- Imagen de ícono -->
+        <h3 class="n-expert">SEO</h3>            <!-- Título del experto -->
+    </div>
+
+    <!-- Tercer experto con enlace a otra página -->
+    <div class="cont-expert">
+        <!-- Imagen con enlace: al hacer clic lleva a otra página -->
+        <a href="API_1 - copia/index.html">
+            <img src="img/security.svg" alt="Ir a otra página" width="300">
+        </a>
+        <h3 class="n-expert">Api</h3>
+    </div>
+</section>
+
+<!-- Cierre innecesario de sección repetido (puedes eliminar esta línea) -->
+</section>
+
+<!-- Fin del contenido principal -->
+</main>
+
+<!-- Pie de página -->
+<footer id="footer">
+    <div class="contenedor footer-content">
+        
+        <!-- Sección de contacto o lema de marca -->
+        <div class="contact-us">
+            <h2 class="brand"></h2> <!-- Podrías poner aquí el nombre de la empresa -->
+            <p>Somos expertos en la creación de tus sueños</p>
+        </div>
+
+        <!-- Íconos de redes sociales -->
+        <div class="social-media">
+            <a href="./" class="social-media-icon">
+                <i class='bx bxl-facebook'></i> <!-- Ícono de Facebook -->
+            </a>
+            <a href="./" class="social-media-icon">
+                <i class='bx bxl-twitter'></i> <!-- Ícono de Twitter -->
+            </a>
+            <a href="./" class="social-media-icon">
+                <i class='bx bxl-instagram'></i> <!-- Ícono de Instagram -->
+            </a>
+        </div>
+    </div>
+
+    <!-- Línea decorativa debajo del footer -->
+    <div class="line"></div>
+</footer>
+
+<!-- Archivos JavaScript del proyecto -->
+<script src="js/menu.js"></script>       <!-- Control del menú (ej. hamburguesa móvil) -->
+<script src="js/lightbox.js"></script>   <!-- Función de galería con efecto lightbox -->
+
+</body>
+</html>

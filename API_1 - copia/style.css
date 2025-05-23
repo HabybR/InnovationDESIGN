@@ -1,0 +1,43 @@
+* {
+
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+img {
+    width: 300px;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-align: center;
+}
+
+article{
+    text-align: center;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.image-container {
+    display: flex;
+    object-fit: scale-down;
+}
+
+.image-container img {
+    width: 100%;
+}
+
+article {
+    padding: 10px;
+    box-shadow: 0px 0px 1px #000;
+}
